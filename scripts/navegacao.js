@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const destinoCotacao = document.getElementById("lista-de-entregas");
 
   if (destinoCotacao) {
-    fetch("./html/cotacao.html")
+    fetch("./cotacao.html")
       .then(response => {
         if (!response.ok) throw new Error("Erro ao carregar cotacao.html");
         return response.text();

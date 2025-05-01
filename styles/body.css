@@ -112,7 +112,7 @@ html, body {
 */
 #rodape-texto {
   text-align: center;
-  font-size: var(--fs-normal);
+  font-size: var(--fs-pequeno);
   margin: 2%;
   color: #f5f5f5;
   font-weight: bold;
@@ -126,6 +126,10 @@ html, body {
 
 /* Tablet: ajustes de ícone de contato */
 @media (min-width: 710px) {
+
+  #rodape-texto {
+    font-size: var(--fs-normal);
+  }
 
 
   .botao-contato {

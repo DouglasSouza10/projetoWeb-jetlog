@@ -76,6 +76,7 @@ input:focus, textarea:focus {
 .botoes-form button img {
   height: 26px; /* Tamanho mais proporcional ao texto */
   width: auto;
+  margin-left: 10px;
 }
 
 /* Estilo geral dos botões */
@@ -169,3 +170,11 @@ button:hover {
 }
 
 
+@media (min-width: 1024px) {
+  .formulario-entrega h2 {
+    font-size: var(--fs-grande2);
+  }
+  .formulario-entrega h3 {
+    font-size: var(--fs-grande);
+  }
+}
