@@ -1,0 +1,149 @@
+/* 
+  === VARIÁVEIS DE FONTE ===
+  Fontes principais do site, definidas no :root para reutilização
+*/
+:root {
+  --fonte-texto: 'Rubik', sans-serif;
+  --fonte-titulo: 'Playfair Display', serif;
+  --fonte-logo: 'Unbounded', sans-serif;
+  --amarelo-ouro: #FFD700;
+
+  /* Fontes baseadas na escala do projeto */
+  --fs-pequeno: 1rem;        /* 16px */
+  --fs-normal: 1.25rem;      /* 20px */
+  --fs-grande: 1.5rem;       /* 24px */
+  --fs-grande2: 1.75rem;     /* 28px */
+  --fs-titulo: 2.5rem;       /* 40px */
+}
+
+
+/* 
+  === LAYOUT BASE ===
+  Estilo global aplicado ao corpo da página
+*/
+html, body {
+  display: block;
+  background-color: #333;
+  margin: 0;
+  padding: 0;
+  font-family: var(--fonte-texto);
+  min-height: 100vh; /* garante altura total da tela */
+}
+
+
+/* 
+  === BANNER TOPO ===
+  Imagem com espaçamento e redimensionamento responsivo
+*/
+.banner-topo {
+  display: block;
+  margin-top: 60px;
+}
+
+.banner-topo img {
+  width: 100vw;
+  height: auto;
+  max-height: 80vh;
+  object-fit: cover;
+  object-position: center;
+  display: block; /* evita espaço em branco embaixo da imagem */
+}
+
+
+/* 
+  === BOTÃO WHATSAPP FIXO ===
+  Estilo do botão flutuante para contato via WhatsApp
+*/
+.botao-whatsapp-fixo {
+  position: fixed;
+  bottom: 3em;
+  right: 2em;
+  background-color: #25D366;
+  padding: 0.8em 1.2em;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  z-index: 2;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.botao-whatsapp-fixo a {
+  color: white;
+  text-decoration: none;
+  font-family: var(--fonte-texto);
+  font-size: var(--fs-normal);
+  display: flex;
+  align-items: center;
+}
+
+.botao-whatsapp-fixo img {
+  width: 30px;
+  height: 30px;
+}
+
+.botao-whatsapp-fixo span {
+  margin-left: 0.7rem;
+}
+
+.botao-whatsapp-fixo:hover {
+  background-color: #000000;
+  transform: scale(1.05);
+}
+
+.botao-whatsapp-fixo a:hover {
+  color: var(--amarelo-ouro);
+}
+
+
+/* 
+  === CONTEÚDO PRINCIPAL ===
+  Cresce pra ocupar o espaço entre header e footer
+*/
+#conteudo-principal {
+  padding: 0 1em;
+}
+
+
+/* 
+  === RODAPÉ ===
+  Estilo básico do rodapé da página
+*/
+#rodape-texto {
+  text-align: center;
+  font-size: var(--fs-normal);
+  margin: 2%;
+  color: #f5f5f5;
+  font-weight: bold;
+}
+
+
+/* 
+  === MEDIA QUERIES ===
+  Ajustes de layout para tamanhos maiores
+*/
+
+/* Tablet: ajustes de ícone de contato */
+@media (min-width: 710px) {
+
+
+  .botao-contato {
+    background-color: rgba(75, 75, 75, 0.1);
+  }
+
+  .botao-contato img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .banner-topo {
+    margin: 5rem 0 1rem 0;
+  }
+
+  .banner-topo img {
+    width: 100vw;
+  }
+  
+}
+

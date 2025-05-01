@@ -1,0 +1,91 @@
+<!-- Formulário principal dentro de um container com animação de entrada (slide-in-bottom) -->
+<div class="formulario-entrega slide-in-bottom" id="enderecos">
+  
+  <!-- Título e subtítulo de convite -->
+  <h2>Tá precisando de ajuda?</h2><br>
+  <h3>se quiser adiantar o serviço, pode mandar!</h3>
+
+  <!-- Início do formulário -->
+  <form action="#" method="post" id="form-entrega">
+
+    <!-- Bloco do ponto A (Retirada) -->
+    <div class="ponto-a">
+      <h3>Retirada - Ponto A</h3>
+
+      <!-- Campo para endereço de retirada -->
+      <label>Endereço:</label>
+      <input class="input-pontoA-endereco" id="endereco-a" type="text" name="retirada" placeholder="Rua Passos, Nº 12 - centro" required>
+
+      <!-- Campo para complemento de retirada -->
+      <label>Complemento:</label>
+      <input class="input-pontoA-complemento" id="complemento-a" type="text" name="complemento-retirada" placeholder="Bloco/Apartamento">
+
+      <!-- Campo para observações de retirada -->
+      <label>Observações:</label>
+      <textarea class="input-pontoA-observacao" id="observacao-a" name="obs-retirada" placeholder="Ex: portaria, horário etc."></textarea>
+    </div>
+
+    <!-- Bloco do ponto B (Entrega) -->
+    <div class="ponto-b">
+      <h3>Entrega - Ponto B</h3>
+
+      <!-- Campo para endereço de entrega -->
+      <label>Endereço:</label>
+      <input class="input-pontoB-endereco" id="endereco-b" type="text" name="entrega" placeholder="Rua Passos, Nº 12 - centro" required>
+
+      <!-- Campo para complemento de entrega -->
+      <label>Complemento:</label>
+      <input class="input-pontoB-complemento" id="complemento-b" type="text" name="complemento-entrega" placeholder="Bloco/Apartamento">
+
+      <!-- Campo para nome do destinatário ou setor -->
+      <label>Entregar para:</label>
+      <textarea class="input-pontoB-observacao" id="observacao-b" name="entregar-para" placeholder="Nome do destinatário ou setor"></textarea>
+    </div>
+
+    <!-- Container vazio onde serão inseridos dinamicamente os pontos extras via JavaScript -->
+    <div id="pontos-extras"></div>
+
+    <!-- Botões para adicionar mais pontos e enviar o trajeto -->
+    <div class="botoes-form">
+      <!-- Botão para adicionar mais pontos de parada -->
+      <button type="button" id="adicionar-ponto">
+        <img src="../img/icone-localizacao-preto.png" alt="icone de localizaçao">
+        Adicionar mais pontos
+      </button>
+
+      <!-- Botão para enviar o trajeto via WhatsApp -->
+      <button type="button" id="enviar-trajeto">
+        <img src="../img/icone-whats-preto.png" alt="botao para enviar o trajeto via WhatsApp">
+        Enviar Trajeto
+      </button>
+    </div>
+
+    <!-- Área de exibição das formas de pagamento aceitas -->
+    <div class="formas-pagamento">
+      <p>Aceitamos:</p>
+      <div class="icones-pagamento">
+        
+        <!-- Opção de pagamento USDT -->
+        <div id="pag-usdt">
+          <img src="../img/usdt-icon.svg" alt="icone da moeda USDT">
+          <label>USDT</label>
+        </div>
+
+        <!-- Opção de pagamento Pix -->
+        <div id="pag-pix">
+          <img src="../img/pix-icon1.png" alt="icone da moeda Pix">
+          <label>PIX</label>
+        </div>
+
+        <!-- Opção de pagamento Bitcoin -->
+        <div id="pag-btc">
+          <img src="../img/btc-icon.svg" alt="icone da moeda BTC">
+          <label>BTC</label>
+        </div>
+
+      </div>
+    </div>
+
+  </form> <!-- Fim do formulário -->
+
+</div> <!-- Fim do container do formulário -->

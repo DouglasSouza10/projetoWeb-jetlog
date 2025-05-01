@@ -1,0 +1,131 @@
+/* Define o main como flex container em coluna */
+main {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5%;
+}
+
+img {
+  max-width: 100%;
+}
+
+.bloco {
+  margin: 1rem;
+}
+
+.bloco-texto {
+  text-align: center;
+  color: #e1dcdc;
+  font-family: var(--fonte-texto);
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+.bloco-texto h2 {
+  font-size: var(--fs-normal);
+  margin: 0.5em 0;
+}
+
+.bloco-texto p {
+  font-size: var(--fs-pequeno);
+}
+
+#bloco-5-texto li {
+  font-size: var(--fs-pequeno);
+}
+
+/* Garante espaçamento entre texto e imagem de cada bloco */
+[id^="bloco-"][id$="-texto"],
+[id^="bloco-"][id$="-img"] {
+  margin-bottom: 1.5rem;
+}
+
+/* Inverte ordem do bloco 3 no mobile */
+#bloco-3-texto {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+/* ----- RESPONSIVO: a partir de 612px ----- */
+@media (min-width: 612px) {
+  .bloco-texto h2 {
+    font-size: var(--fs-grande);
+  }
+
+  .bloco-texto p {
+    font-size: var(--fs-normal);
+  }
+
+  #bloco-5-texto li {
+    font-size: var(--fs-normal);
+  }
+
+  /* Blocos se tornam grid com 2 colunas */
+  .bloco {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    border-radius: 0.5rem;
+    width: 100%;
+  }
+
+  .bloco-texto, .bloco-img {
+    width: 100%;
+  }
+
+  .bloco-img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    text-align: center;
+  }
+
+  /* No desktop, bloco 3 volta ordem normal */
+  #bloco-3-texto {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #bloco-3-texto img {
+    height: 300px;
+  }
+
+  #bloco-4 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Centraliza a lista de entregas */
+  #lista-de-entregas {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+  }
+}
+
+/* ----- RESPONSIVO: a partir de 870px ----- */
+@media (min-width: 870px) {
+  .bloco-texto h2 {
+    font-size: var(--fs-grande2);
+  }
+
+  .bloco-texto p {
+    font-size: var(--fs-grande);
+  }
+}
+
+/* ----- RESPONSIVO: a partir de 1440px ----- */
+@media (min-width: 1440px) {
+  .bloco-texto h2 {
+    font-size: var(--fs-titulo);
+  }
+
+  .bloco-texto p {
+    font-size: var(--fs-grande2);
+  }
+
+  #bloco-5-texto li {
+    font-size: var(--fs-grande);
+    padding: 5px;
+  }
+}
